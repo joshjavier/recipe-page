@@ -64,9 +64,32 @@ h2 {
   color: var(--bs-primary);
 }
 
-p {
+p, li {
   line-height: 1.6;
   letter-spacing: 0.4px;
+}
+
+* + li {
+  margin-top: 8px;
+}
+
+ol, ul {
+  padding-inline-start: 40px;
+  margin-bottom: 0;
+}
+
+ul li {
+  list-style-type: none;
+  position: relative;
+}
+
+ul li::before {
+  content: '\2022';
+  color: var(--accent-color);
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  translate: calc(-100% - 27px) -50%;
 }
 
 .recipe img {
@@ -84,4 +107,28 @@ p {
 
 .s-intro {
   margin-bottom: 31px;
+}
+
+/* PREP SECTION */
+
+.s-prep {
+  padding: 20px 24px 24px;
+  background-color: hsl(var(--clr-rose-white));
+  border-radius: 15px;
+  --accent-color: hsl(var(--clr-dark-raspberry));
+}
+
+.s-prep h2 {
+  font-family: var(--bs-font-sans-serif);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: normal;
+  color: var(--accent-color);
+  margin-bottom: 14px;
+}
+
+@media (min-width: 768px) {
+  .s-prep {
+    padding: 25px 28px 27px;
+  }
 }
