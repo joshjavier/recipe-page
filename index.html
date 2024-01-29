@@ -52,16 +52,25 @@
           </template>
         </ul>
       </div>
+
+      <div class="s-ingredients" x-data="{
+        items: [
+          '2-3 large eggs',
+          'Salt, to taste',
+          'Pepper, to taste',
+          '1 tablespoon of butter or oil',
+          'Optional fillings: cheese, diced vegetables, cooked meats, herbs'
+        ]
+      }">
+        <h2>Ingredients</h2>
+        <ul>
+          <template x-for="item of items">
+            <li x-text="item"></li>
+          </template>
+        </ul>
+      </div>
     </div>
   </main>
-
-  Ingredients
-
-  2-3 large eggs
-  Salt, to taste
-  Pepper, to taste
-  1 tablespoon of butter or oil
-  Optional fillings: cheese, diced vegetables, cooked meats, herbs
 
   Instructions
 
