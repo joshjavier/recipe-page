@@ -192,6 +192,7 @@ hr {
 .s-nutrition tr > :first-child {
   padding-left: 32px;
   font-weight: 400;
+  color: var(--bs-body-color);
 }
 
 .s-nutrition tr > :last-child {
