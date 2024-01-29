@@ -63,6 +63,7 @@ h1 {
 h2 {
   color: var(--bs-primary);
   font-size: 28px;
+  margin-block: 32px 24px;
 }
 
 p, li {
@@ -125,7 +126,7 @@ ul li::before {
   font-size: 20px;
   line-height: normal;
   color: var(--accent-color);
-  margin-bottom: 14px;
+  margin-block: 0 14px;
 }
 
 @media (min-width: 768px) {
@@ -138,9 +139,29 @@ ul li::before {
 
 .s-ingredients {
   --accent-color: hsl(var(--clr-nutmeg));
-  margin-top: 32px;
 }
 
-.s-ingredients h2 {
-  margin-bottom: 24px;
+hr {
+  margin-block: 32px;
+}
+
+/* INSTRUCTIONS SECTION */
+
+.s-instructions {
+  --accent-color: hsl(var(--clr-nutmeg));
+}
+
+.s-instructions ol {
+  list-style-type: none;
+  counter-reset: steps;
+  position: relative;
+}
+
+.s-instructions li::before {
+  counter-increment: steps;
+  content: counter(steps) ".";
+  font-weight: 700;
+  color: var(--accent-color);
+  position: absolute;
+  left: 8px;
 }
